@@ -74,11 +74,10 @@ int _print_argument(va_list args, char specifier)
  *         On error, -1 is returned.
  */
 
-/** int _putchar(char c)
- * {
- *	return write(1, &c, 1);
- * }
- */
+int _putchar(char c)
+{
+	return write(1, &c, 1);
+}
 
 
 /**
