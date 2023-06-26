@@ -9,11 +9,6 @@
 
 int _printf(const char *format, ...)
 {
-	if (format == NULL)
-	{
-		return (-1);
-	}
-
 	va_list args;
 	int count = 0;
 
@@ -34,12 +29,6 @@ int _printf(const char *format, ...)
 			else if (*format == 's')  /* Handle %s specifier */
 			{
 				char *s = va_arg(args, char *);
-
-				if (s == NULL)
-				{
-					return (-1);
-				}
-
 				int len = 0;
 
 				while (s[len])
