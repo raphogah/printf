@@ -9,6 +9,8 @@
 
 int _printf(const char *format, ...)
 {
+	assert(format == NULL); /* check for NULL */
+
 	va_list args;
 	int count = 0;
 
@@ -30,6 +32,8 @@ int _printf(const char *format, ...)
 			{
 				char *s = va_arg(args, char *);
 				int len = 0;
+
+				assert(s != NULL); /* Check if string is NULL */
 
 				while (s[len])
 				len++;
