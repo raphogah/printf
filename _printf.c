@@ -9,7 +9,10 @@
 
 int _printf(const char *format, ...)
 {
-	assert(format == NULL); /* check for NULL */
+	if (format == NULL)
+	{
+		return (-1);
+	}
 
 	va_list args;
 	int count = 0;
@@ -31,12 +34,16 @@ int _printf(const char *format, ...)
 			else if (*format == 's')  /* Handle %s specifier */
 			{
 				char *s = va_arg(args, char *);
+
+				if (s == NULL)
+				{
+					return (-1);
+				}
+
 				int len = 0;
 
-				assert(s != NULL); /* Check if string is NULL */
-
 				while (s[len])
-				len++;
+					len++;
 
 				count += write(1, s, len);
 			}
