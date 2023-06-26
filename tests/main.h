@@ -7,6 +7,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <limits.h>
 
 #define BUFFER_SIZE 1024
 
@@ -30,6 +31,10 @@ void print_rot13(char *buffer, int *index, char *str, int *count);
 
 /* _printf - Prints output according to a format */
 int _printf(const char *format, ...);
+
+/*_printf.c helpers */
+int _print_argument(va_list args, char specifier);
+int _print_string(char *s);
 
 #endif /* MAIN_H */
 
