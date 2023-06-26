@@ -2,9 +2,8 @@
 
 /**
  * print_hex - prints unsigned hex numbers in lowercase
- * @ap: the argument pointer
- * @params: the parameters struct
- *
+ * @ap: the arg pointer
+ * @params: the parameters structures
  * Return: bytes printed
  */
 int print_hex(va_list ap, params_t *params)
