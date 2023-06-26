@@ -32,4 +32,3 @@ void print_rot13(char *buffer, int *index, char *str, int *count);
 int _printf(const char *format, ...);
 
 #endif /* MAIN_H */
-
