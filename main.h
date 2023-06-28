@@ -70,12 +70,13 @@ typedef struct specifier
 int _puts(char *str);
 int _putchar(int c);
 
-/* print_functions.c module */
-int print_char(va_list ap, params_t *params);
-int print_int(va_list ap, params_t *params);
-int print_string(va_list ap, params_t *params);
-int print_percent(va_list ap, params_t *params);
-int print_S(va_list ap, params_t *params);
+/* print_functions.c module /
+* int print_char(va_list ap, params_t *params);
+* int print_int(va_list ap, params_t *params);
+* int print_string(va_list ap, params_t *params);
+* int print_percent(va_list ap, params_t *params);
+* int print_S(va_list ap, params_t *params);
+*/
 
 /* number.c module */
 char *convert(long int num, int base, int flags, params_t *params);
@@ -92,7 +93,7 @@ char *get_width(char *s, params_t *params, va_list ap);
 /* convert_number.c module */
 int print_hex(va_list ap, params_t *params);
 int print_HEX(va_list ap, params_t *params);
-int print_binary(va_list ap, params_t *params);
+/* int print_binary(va_list ap, params_t *params);*/
 int print_octal(va_list ap, params_t *params);
 
 /* simple_printers.c module */
@@ -115,5 +116,12 @@ char *get_precision(char *p, params_t *params, va_list ap);
 
 /* _prinf.c module */
 int _printf(const char *format, ...);
+
+/* 2-better-in-print.c */
+void print_char(va_list args, int *count);
+void print_string(va_list args, int *count);
+void print_integer(va_list args, int *count);
+void print_binary(va_list args, int *count);
+
 
 #endif
